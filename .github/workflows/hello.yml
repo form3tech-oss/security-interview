@@ -1,0 +1,13 @@
+name: Hello World Action
+on: [pull_request_target]
+
+jobs:
+  TEST_PR_TARGET:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+#         with:
+#           ref: ${{ github.event.pull_request.head.sha }}
+
+      - run: echo "running from fork"
